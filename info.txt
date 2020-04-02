@@ -1,0 +1,8 @@
+-Everything is run through a host
+
+# 5 Essential Data Structures
+-Device
+-Program
+-Command Queue
+-Kernel
+-Context
