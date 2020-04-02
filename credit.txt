@@ -1,0 +1,8 @@
+# PyOpenCL Documentation
+https://documen.tician.de/pyopencl/misc.html#frequently-asked-questions
+
+# Introduction to OpenCL in Layman terms
+https://www.drdobbs.com/parallel/a-gentle-introduction-to-opencl/231002854?pgno=1
+
+# Tutorial Used: 
+HandsOnOpenCL on GitHub
