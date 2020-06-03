@@ -26,7 +26,24 @@ program_source = """
 apple_program_source = cl.Program(apple_context, program_source) # program made for context, using written kernel
 apple_program = apple_program_source.build() # build the program
 
+# code to run a kernel
+def run_kernel(queue, kernel, global_size, input_tuples, output_tuples, local_size = (32,)):
 
+	#copying data onto the device
+	for (array, buffer) in input_tuples:
+		cl.enqueue_copy(queue, src=array, dest=buffer)
+
+	#running program on the device
+	kernel_arguments = [buffer for (_,buffer) in input_tuples]
+	kernel_arguments += [buffer for (_,buffer) in output_tuples] 
+	kernel(queue, global_size, local_size, *kernel_arguments)
+
+	#copying data off device
+	for (arr, buffer) in output_tuples:
+		cl.enqueue_copy(queue, src=buffer, dest=arr)
+		
+	#waiting for process to finish
+	queue.finish()
 
 
 
