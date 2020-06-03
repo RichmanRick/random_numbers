@@ -46,6 +46,16 @@ program_source = """
 apple_program_source = cl.Program(apple_context, program_source) # program made for context, using written kernel
 apple_program = apple_program_source.build() # build the program
 
+# Creating data
+N = int(2**20) # 2^20
+a = np.random.rand(N).astype(int) # array of 2^20 random integers
+b = np.random.rand(N).astype(int) 
+c = np.empty_like(a) # destination array
+
+# Device Memory setup
+a_apple_buffer = cl.Buffer(apple_context, flags=cl.mem_flags.READ_ONLY, size=a.nbytes)
+b_apple_buffer = cl.Buffer(apple_context, flags=cl.mem_flags.READ_ONLY, size=b.nbytes)
+c_apple_buffer = cl.Buffer(apple_context, flags=cl.mem_flags.WRITE_ONLY, size=c.nbytes)
 
 
 
