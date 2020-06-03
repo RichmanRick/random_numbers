@@ -4,5 +4,6 @@ https://documen.tician.de/pyopencl/index.html
 # Introduction to OpenCL in Layman terms
 https://www.drdobbs.com/parallel/a-gentle-introduction-to-opencl/231002854?pgno=1
 
-# Tutorial Used: 
+# Tutorials Used: 
 HandsOnOpenCL on GitHub
+"Parallel Programming with (Py)OpenCL for Fun and Profit" -- https://www.youtube.com/watch?v=hqieYt9sXPU
