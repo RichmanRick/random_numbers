@@ -1,3 +1,5 @@
+Credit: Parallel Programming with (Py)OpenCL for Fun and Profit, via Youtube
+	
 import pyopencl as cl
 import numpy as np
 
