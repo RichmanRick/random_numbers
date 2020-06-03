@@ -1,18 +1,10 @@
 -Everything is run through a host
 
-# 5 Essential Data Structures
+# The 5 Essential Data Structures
 -Device
 -Program
 -Command Queue
 -Kernel
 -Context
 
-# Device
-
-# Program
-
-# Command Queue
-
-# Kernel
-
-# Context
+-NumPy library is pretty necessary for many of OpenCl operations
