@@ -57,6 +57,7 @@ a_apple_buffer = cl.Buffer(apple_context, flags=cl.mem_flags.READ_ONLY, size=a.n
 b_apple_buffer = cl.Buffer(apple_context, flags=cl.mem_flags.READ_ONLY, size=b.nbytes)
 c_apple_buffer = cl.Buffer(apple_context, flags=cl.mem_flags.WRITE_ONLY, size=c.nbytes)
 
+apple_queue = cl.CommandQueue(apple_context) # Create command queue associated with context
 
 
 
